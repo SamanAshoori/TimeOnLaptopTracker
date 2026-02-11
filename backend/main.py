@@ -2,8 +2,18 @@ from fastapi import FastAPI
 from typing import List
 from uuid import uuid4
 from schemas import ActivitySchema
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI(title="TimeOnLaptop Tracker")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"], # The Svelte URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 #mock_data
 fake_activites = [
