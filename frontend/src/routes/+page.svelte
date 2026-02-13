@@ -72,7 +72,6 @@
         -webkit-text-fill-color: transparent;
     }
 
-    /* Subtitle tech line */
     main::before {
         content: "SYSTEM_ACTIVE // VER 2.0.26";
         font-family: monospace;
